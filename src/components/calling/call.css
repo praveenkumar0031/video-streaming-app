@@ -1,0 +1,100 @@
+/* Container */
+.video-call-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.video-call-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.video-call-title .highlight {
+  color: #2563eb; /* blue */
+}
+
+/* Video Section */
+.video-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.video-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid #cbd5e1;
+  background: black;
+}
+
+.video-label {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:disabled,
+.btn.disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.start-btn {
+  background: #16a34a;
+}
+
+.start-btn:hover:not(:disabled) {
+  background: #15803d;
+  transform: scale(1.05);
+}
+
+.end-btn {
+  background: #dc2626;
+}
+
+.end-btn:hover:not(:disabled) {
+  background: #b91c1c;
+  transform: scale(1.05);
+}

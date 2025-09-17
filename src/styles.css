@@ -1,0 +1,133 @@
+/* General layout */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #333;
+}
+
+/* Landing Page */
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.landing-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.landing-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.landing-box input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.landing-box input:focus {
+  border-color: #2563eb;
+}
+
+.landing-box button {
+  width: 100%;
+  padding: 0.7rem;
+  font-weight: bold;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.landing-box button:hover {
+  background: #1e40af;
+}
+
+.queue-message {
+  margin-top: 0.8rem;
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+/* Video Call Screen */
+.call-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.call-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+video {
+  flex: 1;
+  border-radius: 12px;
+  border: 2px solid #d1d5db;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: black;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+button.call-btn {
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button.start {
+  background: #16a34a;
+}
+
+button.start:hover {
+  background: #15803d;
+}
+
+button.end {
+  background: #dc2626;
+}
+
+button.end:hover {
+  background: #b91c1c;
+}
+
+button.disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
