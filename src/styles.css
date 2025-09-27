@@ -131,3 +131,90 @@ button.disabled {
   background: #9ca3af;
   cursor: not-allowed;
 }
+/* Container */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title */
+.landing-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Subtitle */
+.landing-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+}
+
+/* Input field */
+.landing-input {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 250px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.landing-input:focus {
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Button */
+.landing-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #ff6a00;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.landing-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Queue message */
+.queue-msg {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #ffd700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .landing-title {
+    font-size: 2rem;
+  }
+
+  .landing-input {
+    width: 200px;
+  }
+
+  .landing-btn {
+    width: 200px;
+  }
+}
+

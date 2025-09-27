@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import SockJS from "sockjs-client";
+import { useNavigate } from "react-router-dom";
 import { Client } from "@stomp/stompjs";
 import "./call.css"; // external CSS
 
@@ -14,10 +15,10 @@ const VideoCall = ({ username, peer }) => {
   const [inCall, setInCall] = useState(false);
   const [busy, setBusy] = useState(false);
   const [remotePeerName, setRemotePeerName] = useState("");
-
+  const navigate=useNavigate();
   useEffect(() => {
     // Initialize WebSocket STOMP
-    const socket = new SockJS("http://localhost:8080/ws");
+    const socket = new SockJS("http://10.23.162.56:8080/ws");
     const stompClient = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: 5000,
@@ -162,6 +163,9 @@ const VideoCall = ({ username, peer }) => {
 
     setInCall(true);
   };
+  const backtologin=()=>{
+    navigate("\video-calling");
+  }
 
   const endCall = () => {
     if (pcRef.current) {
@@ -185,17 +189,17 @@ const VideoCall = ({ username, peer }) => {
   return (
     <div className="video-call-container">
       <h1 className="video-call-title">
-        Video Call: <span className="highlight">{username}</span>
+        Video Call To: <span className="highlight">{peer}</span>
       </h1>
 
       <div className="video-wrapper">
         <div className="video-box">
-          <video ref={localVideoRef} autoPlay playsInline muted className="video" />
-          <p className="video-label">{username}</p>
+          <video ref={localVideoRef} autoPlay playsInline muted className="local-video" />
+          <p className="local-video-label">you : {username}</p>
         </div>
         <div className="video-box">
-          <video ref={remoteVideoRef} autoPlay playsInline className="video" />
-          <p className="video-label">{remotePeerName || "Peer"}</p>
+          <video ref={remoteVideoRef} autoPlay playsInline className="remote-video" />
+          
         </div>
       </div>
 
@@ -214,6 +218,13 @@ const VideoCall = ({ username, peer }) => {
         >
           ❌ End Call
         </button>
+        <button
+          onClick={backtologin}
+          className={`btn end-btn`}
+        >
+           back
+        </button>
+
       </div>
     </div>
   );
