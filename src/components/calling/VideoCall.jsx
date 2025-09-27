@@ -18,7 +18,7 @@ const VideoCall = ({ username, peer }) => {
   const navigate=useNavigate();
   useEffect(() => {
     // Initialize WebSocket STOMP
-    const socket = new SockJS("http://10.23.162.56:8080/ws");
+    const socket = new SockJS("http://localhost:8080/ws");
     const stompClient = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: 5000,
